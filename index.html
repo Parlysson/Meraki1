@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nana Café - Loja Virtual</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Meraki ☕</h1>
+      <p>Sinta-se numa cafeteria mágica ✨</p>
+    </header>
+
+    <section class="cardapio">
+      <div class="categoria">
+        <h2>🍹 Bebidas</h2>
+        <div class="item">
+          <p>Café Espresso</p><span>R$ 5,00</span>
+          <button onclick="adicionarAoCarrinho('Café Espresso', 5.00)">+ Adicionar</button>
+        </div>
+        <div class="item">
+          <p>Capuccino Cremoso</p><span>R$ 7,50</span>
+          <button onclick="adicionarAoCarrinho('Capuccino Cremoso', 7.50)">+ Adicionar</button>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h2>🍰 Bolos</h2>
+        <div class="item">
+          <p>Bolo de Cenoura</p><span>R$ 6,50</span>
+          <button onclick="adicionarAoCarrinho('Bolo de Cenoura', 6.50)">+ Adicionar</button>
+        </div>
+        <div class="item">
+          <p>Bolo de Laranja</p><span>R$ 5,50</span>
+          <button onclick="adicionarAoCarrinho('Bolo de Laranja', 5.50)">+ Adicionar</button>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h2>🥧 Tortas</h2>
+        <div class="item">
+          <p>Torta de Limão</p><span>R$ 7,00</span>
+          <button onclick="adicionarAoCarrinho('Torta de Limão', 7.00)">+ Adicionar</button>
+        </div>
+        <div class="item">
+          <p>Torta de Morango</p><span>R$ 8,00</span>
+          <button onclick="adicionarAoCarrinho('Torta de Morango', 8.00)">+ Adicionar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="atendente">
+    <img src="imagens/atendente.png" alt="Atendente">
+    <div class="fala">Oi! Bem-vindo à nossa lojinha encantada 💖</div>
+  </div>
+
+  <button class="carrinho-btn" onclick="mostrarCarrinho()">🛒 Ver Pedido</button>
+
+  <div id="carrinho" class="carrinho hidden">
+    <h3>Seu Pedido</h3>
+    <ul id="itens-carrinho"></ul>
+    <p id="total"></p>
+    <a id="whatsapp-link" target="_blank">Enviar para o WhatsApp</a>
+    <button onclick="fecharCarrinho()">Fechar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
